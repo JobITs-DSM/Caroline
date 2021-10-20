@@ -19,7 +19,7 @@ const CompanyCard: FC<CompanyCardProps> = (res) => {
       </div>
       <div className={s.tag_wrap}>
         {res.tags.map((tag, index) => (
-          <div key={index}>{tag}</div>
+          <div key={index}>#{tag}</div>
         ))}
       </div>
     </div>
