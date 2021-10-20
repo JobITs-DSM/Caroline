@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: var(--black100);
+  font-size: 24px;
+}
+
+.list_wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 30px;
+  justify-items: center;
+  margin-top: 25px;
+}
