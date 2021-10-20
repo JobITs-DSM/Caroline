@@ -18,9 +18,19 @@ p {
   margin: 0;
   padding: 0;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url("/arrow.jpg") no-repeat 95% 50%;
+}
+select::-ms-expand {
+  display: none;
+}
 input,
 button,
-textarea {
+textarea,
+select {
   outline: none;
   border: none;
 }

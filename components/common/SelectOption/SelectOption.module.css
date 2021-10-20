@@ -1,17 +1,18 @@
 .wrapper {
   width: 100%;
   display: flex;
-  margin-bottom: 30px;
   justify-content: space-between;
 }
 .wrapper > div {
   display: flex;
   gap: 15px;
 }
-
 .wrapper > div > select {
   border: 1px solid var(--grey300);
   width: 170px;
   height: 45px;
   border-radius: 5px;
+  padding-left: 15px;
+  color: var(--black100);
+  font-size: 16px;
 }

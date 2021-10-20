@@ -2,6 +2,7 @@ import { FC } from "react";
 import s from "./CompanyCardList.module.css";
 import { CompanyCardProps } from "./../../../interfaces/company";
 import CompanyCard from "../CompanyCard";
+import SelectOption from "../SelectOption";
 
 interface Props {
   title: string;
@@ -11,6 +12,7 @@ interface Props {
 const CompanyCardList: FC<Props> = (res) => {
   return (
     <div className={s.wrapper}>
+      <SelectOption />
       <h1 className={s.title}>{res.title}</h1>
       <div className={s.list_wrap}>
         {res.companyList.map((company, index) => (
