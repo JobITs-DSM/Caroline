@@ -21,7 +21,7 @@ const CompanyCardList: FC<Props> = (res) => {
             applicantCnt={company.applicantCnt}
             companyId={company.companyId}
             name={company.name}
-            field={company.area}
+            field={company.field}
             tags={company.tags}
             area={company.area}
           />
