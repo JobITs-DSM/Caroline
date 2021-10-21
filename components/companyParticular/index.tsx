@@ -23,6 +23,20 @@ const CompanyParticular: FC = () => {
             <Review />
           </div>
         </div>
+        <div className={s.company_info}>
+          <div className={s.company_main_info}>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQnTKaRXoOCdv-pDk7OYHx3C_jcfIVUTCWlr3T-oUbdMsJAkTGOE6zCofHYC-7mnDsiuA&usqp=CAU"
+              alt=""
+            />
+            <div>
+              <h1>프론트엔드</h1>
+              <h3>
+                배달의 민족 <span>서울</span>
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
