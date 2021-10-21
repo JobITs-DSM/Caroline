@@ -80,17 +80,19 @@ const CompanyParticular: FC = () => {
           />
         </div>
         <div className={s.side_wrap}>
-          <ProfileCard />
-          <div className={s.review_wrap}>
-            <h1>면접 후기</h1>
-            <div className={s.review_list}>
-              <Review />
-              <Review />
-            </div>
-            <h1>실습 후기</h1>
-            <div className={s.review_list}>
-              <Review />
-              <Review />
+          <div className={s.sticky_wrap}>
+            <ProfileCard />
+            <div className={s.review_wrap}>
+              <h1>면접 후기</h1>
+              <div className={s.review_list}>
+                <Review />
+                <Review />
+              </div>
+              <h1>실습 후기</h1>
+              <div className={s.review_list}>
+                <Review />
+                <Review />
+              </div>
             </div>
           </div>
         </div>

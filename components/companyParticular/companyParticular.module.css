@@ -6,6 +6,7 @@
 .flex_wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .cover_maininfor_wrap {
@@ -24,9 +25,12 @@
   flex-direction: column;
 }
 
-.item2 {
-  height: 170px;
-  background-color: pink;
+.sticky_wrap {
+  position: sticky;
+  top: var(--main-padding-top);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .review_wrap {
