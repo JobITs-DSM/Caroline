@@ -3,4 +3,40 @@
   height: 170px;
   border: 1px solid var(--grey300);
   border-radius: 5px;
+  padding: 20px;
+}
+.wrapper > button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--main-color);
+  color: var(--grey000);
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.profile_infor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.profile_infor > img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid var(--grey300);
+}
+.profile_infor > div {
+  display: flex;
+  flex-direction: column;
+}
+.profile_infor > div > h1 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--black100);
+}
+.profile_infor > div > h3 {
+  color: var(--grey700);
+  font-size: 14px;
+  font-weight: 400;
 }
