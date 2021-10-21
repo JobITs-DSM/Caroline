@@ -1,13 +1,24 @@
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import s from "./CompanyCard.module.css";
 import { CompanyCardProps } from "../../../interfaces/company";
+import { useRouter } from "next/dist/client/router";
 
 const CompanyCard: FC<CompanyCardProps> = (res) => {
+  const router = useRouter();
+
+  const routingToCompanyParticular = useCallback(() => {
+    router.push(`/particular?company_id=${res.companyId}`);
+  }, []);
+
   return (
     <div className={s.wrapper}>
       <div className={s.cover_wrap}>
         <img className={s.profile} src={res.profile} />
-        <img className={s.cover} src={res.cover} />
+        <img
+          className={s.cover}
+          src={res.cover}
+          onClick={routingToCompanyParticular}
+        />
       </div>
       <h1 className={s.main_infor}>
         {res.field} • {res.applicantCnt}명
