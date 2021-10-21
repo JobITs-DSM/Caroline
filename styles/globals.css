@@ -3,7 +3,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
 }
 img {
   object-fit: cover;
@@ -37,8 +36,12 @@ select {
 button {
   cursor: pointer;
 }
+textarea {
+  resize: none;
+}
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
 
   --grey000: #ffffff;
   --grey100: #fafafa;
