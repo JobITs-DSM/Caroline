@@ -4,6 +4,7 @@ import ProfileCard from "../common/ProfileCard";
 import CompanyCardList from "../common/CompanyCardList";
 import { companyDummy } from "./../../export/dummyData";
 import SlidePage from "./slidePage";
+import Chart from "./Chart";
 
 const Main: FC = () => {
   return (
@@ -15,7 +16,7 @@ const Main: FC = () => {
           </div>
         </div>
         <ProfileCard />
-        <div className={s.graph_wrapper}></div>
+        <Chart />
       </div>
       <CompanyCardList
         title="현재 모집중인 취업처"
