@@ -7,7 +7,9 @@ const Header: FC = () => {
     <div className={s.root}>
       <div className={s.top_bar}>
         <div>
-          <h1 className={s.logo}>JobITs</h1>
+          <Link href="/">
+            <h1 className={s.logo}>JobITs</h1>
+          </Link>
           <div className={s.menu_wrap}>
             <Link href="/list">
               <span>기업 목록</span>

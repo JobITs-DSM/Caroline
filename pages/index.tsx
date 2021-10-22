@@ -1,7 +1,4 @@
-import CompanyParticular from "../components/companyParticular";
-import CompanyCardList from "./../components/common/CompanyCardList/index";
-import { companyDummy } from "./../export/dummyData";
-
+import Main from "./../components/main/index";
 export default function Home() {
-  return <CompanyParticular />;
+  return <Main />;
 }
