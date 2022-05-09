@@ -1,11 +1,13 @@
-interface region {
-  key: string;
+import { FieldKey } from "../interfaces/field";
+
+interface field {
+  key: FieldKey;
   name: string;
 }
 
-export const regions: region[] = [
+export const fields: field[] = [
   {
-    key: "null",
+    key: null,
     name: "전체 분야",
   },
   {
