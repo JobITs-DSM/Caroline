@@ -1,5 +1,6 @@
 import s from "./SelectOption.module.css";
 import { FC } from "react";
+import { regions } from "./../../../constants/region";
 
 const SelectOption: FC = () => {
   return (
@@ -11,8 +12,12 @@ const SelectOption: FC = () => {
         <select name="" id="">
           <option value="">전체 지역</option>
         </select>
-        <select name="" id="">
-          <option value="">전체 분야</option>
+        <select name="region">
+          {regions.map((region, index) => (
+            <option value={region.key} key={index}>
+              {region.name}
+            </option>
+          ))}
         </select>
       </div>
       <div>
