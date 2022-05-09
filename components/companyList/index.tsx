@@ -1,6 +1,6 @@
 import { FC } from "react";
 import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
+import { companyDummy } from "../../lib/export/dummyData";
 
 const CompanyList: FC = () => {
   return (

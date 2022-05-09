@@ -3,7 +3,7 @@ import { FC, useEffect } from "react";
 import Review from "./Review";
 import { textareaResizing } from "../../lib/util/textareaResizing";
 import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
+import { companyDummy } from "../../lib/export/dummyData";
 import ProfileCard from "./../common/ProfileCard/index";
 
 const CompanyParticular: FC = () => {

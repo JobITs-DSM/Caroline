@@ -2,7 +2,7 @@ import s from "./main.module.css";
 import { FC } from "react";
 import ProfileCard from "../common/ProfileCard";
 import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
+import { companyDummy } from "../../lib/export/dummyData";
 import SlidePage from "./slidePage";
 import Chart from "./Chart";
 

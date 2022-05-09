@@ -1,0 +1,4 @@
+export const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+
+export const TEST_TOKEN =
+  "eyJ0eXAiOiJhY2Nlc3MiLCJhbGciOiJIUzUxMiJ9.eyJhdXQiOiJzdHVkZW50IiwiaWF0IjoxNjUyMDYyMDExLCJzdWIiOiIyMDIwMDQ2In0.GJ-RoszsyeQDtTSpQPu34q-GegcymK9RZkbiTsE6fsEtVGeUCn4VBOViB5-i-IbRYr6Jm61k4wI0EHUBJOw6tw";

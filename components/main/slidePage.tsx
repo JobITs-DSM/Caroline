@@ -1,6 +1,6 @@
 import s from "./main.module.css";
 import { FC } from "react";
-import { companyDummy } from "../../export/dummyData";
+import { companyDummy } from "../../lib/export/dummyData";
 
 const SlidePage: FC = () => {
   return (
