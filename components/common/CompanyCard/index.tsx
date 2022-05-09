@@ -7,7 +7,7 @@ const CompanyCard: FC<CompanyCardProps> = (res) => {
   const router = useRouter();
 
   const routingToCompanyParticular = useCallback(() => {
-    router.push(`/particular?company_id=${res.companyId}`);
+    router.push(`/company/${res.companyId}`);
   }, []);
 
   return (

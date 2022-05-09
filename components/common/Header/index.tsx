@@ -11,7 +11,7 @@ const Header: FC = () => {
             <h1 className={s.logo}>JobITs</h1>
           </Link>
           <div className={s.menu_wrap}>
-            <Link href="/list">
+            <Link href="/company">
               <span>기업 목록</span>
             </Link>
             <Link href="/a">
