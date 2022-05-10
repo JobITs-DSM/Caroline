@@ -35,15 +35,13 @@ const Main = () => {
         <Chart />
       </div>
       <CompanyListFilter />
+      <ListTitle content="현재 모집중인 취업처" />
       {currentRecruimentCompanyQuery.isLoading ? (
         <LoadingSpiner />
       ) : (
-        <>
-          <ListTitle content="현재 모집중인 취업처" />
-          <CompanyCardList
-            companyList={currentRecruimentCompanyQuery.data?.data.recruitments}
-          />
-        </>
+        <CompanyCardList
+          companyList={currentRecruimentCompanyQuery.data?.data.recruitments}
+        />
       )}
     </div>
   );

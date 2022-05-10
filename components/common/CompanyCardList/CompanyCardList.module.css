@@ -5,3 +5,9 @@
   justify-items: center;
   margin-top: 25px;
 }
+
+.company_is_none {
+  color: var(--grey600);
+  margin-top: 10px;
+  font-size: 16px;
+}
