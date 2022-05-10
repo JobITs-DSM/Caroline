@@ -2,14 +2,34 @@ import s from "./companyParticular.module.css";
 import { FC, useEffect } from "react";
 import Review from "./Review";
 import { textareaResizing } from "../../lib/util/textareaResizing";
-import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "../../lib/export/dummyData";
 import ProfileCard from "./../common/ProfileCard/index";
+import { useRouter } from "next/dist/client/router";
+import recruitment from "../../apis/company/recruitment";
+import { useQuery } from "react-query";
+import { QueryKeys } from "../../constants/queryKeys";
 
 const CompanyParticular: FC = () => {
+  const router = useRouter();
+  const company_id = router.query.id as string;
+
+  const companyQuery = useQuery(
+    [QueryKeys.recruitmentCompanyDetail, company_id],
+    () =>
+      recruitment.getRecuruitmentCompanyDetail({
+        company_id: parseInt(company_id),
+      }),
+    {
+      staleTime: Infinity,
+      enabled: !!company_id, // id가 존재할때만 호출
+    }
+  );
+
+  console.log(companyQuery);
+
   useEffect(() => {
     textareaResizing("company-description");
   }, []);
+
   return (
     <div className={s.wrapper}>
       <div className={s.flex_wrapper}>
@@ -97,7 +117,6 @@ const CompanyParticular: FC = () => {
           </div>
         </div>
       </div>
-      <CompanyCardList title="관련 취업처" companyList={companyDummy} />
     </div>
   );
 };
