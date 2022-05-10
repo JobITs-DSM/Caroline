@@ -30,6 +30,7 @@ const CompanyListFilter: FC = () => {
           event={updateSearchRequirement}
           name="field"
           requirementOptionArray={fields}
+          defaultValue={searchRequirement.field}
         />
       </div>
       <div>
@@ -37,6 +38,7 @@ const CompanyListFilter: FC = () => {
           event={updateSearchRequirement}
           name="sort"
           requirementOptionArray={SortOptions}
+          defaultValue={searchRequirement.sort}
         />
       </div>
     </div>
