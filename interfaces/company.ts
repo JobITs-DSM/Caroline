@@ -14,3 +14,17 @@ export interface CompanyCardProps {
   work_place: string;
   hiring: Hiring;
 }
+
+export interface CompanyDetail {
+  registration_number: string;
+  reception_year: string;
+  region: number;
+  enterprise_background_image_url: string;
+  enterprise_profile_image_url: string;
+  introduce: string;
+  enterprise_name: string;
+  work_place: string;
+  hiring_area: Hiring;
+  recruit_count: number;
+  tags: string[];
+}
