@@ -1,12 +1,26 @@
 import s from "./main.module.css";
-import { FC } from "react";
 import ProfileCard from "../common/ProfileCard";
 import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
 import SlidePage from "./slidePage";
 import Chart from "./Chart";
+import recruitment from "../../apis/company/recruitment";
+import { useQuery } from "react-query";
+import { QueryKeys } from "../../constants/queryKeys";
+import { useRecoilValue } from "recoil";
+import { searchRequirementState } from "./../../atoms/searchRequirement";
+import CompanyListFilter from "../common/CompanyListFilter";
+import { LoadingSpiner } from "../common/LoadingSpiner";
 
-const Main: FC = () => {
+const Main = () => {
+  const searchRequirement = useRecoilValue(searchRequirementState);
+
+  const currentRecruimentCompanyQuery = useQuery(
+    [QueryKeys.currentRecruitmentCompanyList, searchRequirement],
+    () => recruitment.getCurrentRecruitmentCompanyList(searchRequirement),
+    {
+      staleTime: Infinity,
+    }
+  );
   return (
     <div className={s.wrapper}>
       <div className={s.grid_wrapper}>
@@ -18,10 +32,15 @@ const Main: FC = () => {
         <ProfileCard />
         <Chart />
       </div>
-      <CompanyCardList
-        title="현재 모집중인 취업처"
-        companyList={companyDummy}
-      />
+      <CompanyListFilter />
+      {currentRecruimentCompanyQuery.isLoading ? (
+        <LoadingSpiner />
+      ) : (
+        <CompanyCardList
+          title="현재 모집중인 취업처"
+          companyList={currentRecruimentCompanyQuery.data?.data.recruitments}
+        />
+      )}
     </div>
   );
 };

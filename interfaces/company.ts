@@ -1,10 +1,16 @@
+import { FieldKey } from "./requirements";
+
+type Hiring = {
+  id: number;
+  code: FieldKey;
+};
+
 export interface CompanyCardProps {
-  profile: string;
-  cover: string;
-  name: string;
-  field: string;
+  enterprise_profile_image_url: string;
+  enterprise_background_image_url: string;
+  enterprise_name: string;
+  recruit_count: number;
   tags: string[];
-  applicantCnt: number;
-  companyId: number;
-  area: string;
+  work_place: string;
+  hiring: Hiring;
 }
