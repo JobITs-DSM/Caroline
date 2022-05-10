@@ -11,7 +11,7 @@ export const Selector = (props: Props) => {
   return (
     <select name={props.name} onChange={props.event}>
       {props.requirementOptionArray.map((option, index) => (
-        <option value={option.key?.toString()} key={index}>
+        <option value={option.key ? option.key : "null"} key={index}>
           {option.name}
         </option>
       ))}

@@ -11,9 +11,10 @@ const CompanyListFilter: FC = () => {
   );
 
   const updateSearchRequirement = (event: ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
     setSearchRequirement({
       ...searchRequirement,
-      [event.target.name]: event.target.value,
+      [event.target.name]: value === "null" ? null : value,
     });
   };
   return (
