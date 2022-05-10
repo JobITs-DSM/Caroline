@@ -1,11 +1,5 @@
-import { FC } from "react";
-import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "../../lib/export/dummyData";
-
-const CompanyList: FC = () => {
-  return (
-    <CompanyCardList title="현재 모집중인 취업처" companyList={companyDummy} />
-  );
+const CompanyList = () => {
+  return <>기업 목록</>;
 };
 
 export default CompanyList;

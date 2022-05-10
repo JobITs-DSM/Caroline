@@ -10,6 +10,7 @@ import { useRecoilValue } from "recoil";
 import { searchRequirementState } from "./../../atoms/searchRequirement";
 import CompanyListFilter from "../common/CompanyListFilter";
 import { LoadingSpiner } from "../common/LoadingSpiner";
+import ListTitle from "../common/ListTitle";
 
 const Main = () => {
   const searchRequirement = useRecoilValue(searchRequirementState);
@@ -21,6 +22,7 @@ const Main = () => {
       staleTime: Infinity,
     }
   );
+
   return (
     <div className={s.wrapper}>
       <div className={s.grid_wrapper}>
@@ -36,10 +38,12 @@ const Main = () => {
       {currentRecruimentCompanyQuery.isLoading ? (
         <LoadingSpiner />
       ) : (
-        <CompanyCardList
-          title="현재 모집중인 취업처"
-          companyList={currentRecruimentCompanyQuery.data?.data.recruitments}
-        />
+        <>
+          <ListTitle content="현재 모집중인 취업처" />
+          <CompanyCardList
+            companyList={currentRecruimentCompanyQuery.data?.data.recruitments}
+          />
+        </>
       )}
     </div>
   );

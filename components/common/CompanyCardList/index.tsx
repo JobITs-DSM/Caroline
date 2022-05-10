@@ -4,19 +4,15 @@ import { CompanyCardProps } from "./../../../interfaces/company";
 import CompanyCard from "../CompanyCard";
 
 interface Props {
-  title: string;
   companyList: CompanyCardProps[];
 }
 
-const CompanyCardList: FC<Props> = (res) => {
+const CompanyCardList: FC<Props> = (props) => {
   return (
-    <div className={s.wrapper}>
-      <h1 className={s.title}>{res.title}</h1>
-      <div className={s.list_wrap}>
-        {res.companyList.map((company, index) => (
-          <CompanyCard key={index} company={company} />
-        ))}
-      </div>
+    <div className={s.list_wrap}>
+      {props.companyList.map((company, index) => (
+        <CompanyCard key={index} company={company} />
+      ))}
     </div>
   );
 };
