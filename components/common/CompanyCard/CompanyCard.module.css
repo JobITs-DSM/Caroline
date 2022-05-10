@@ -61,8 +61,10 @@
 
 .tag_wrap {
   display: flex;
-  gap: 4px;
+  column-gap: 6px;
+  row-gap: 8px;
   margin-top: 10px;
+  flex-wrap: wrap;
 }
 .tag_wrap > div {
   padding: 5px 12px;

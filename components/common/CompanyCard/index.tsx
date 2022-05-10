@@ -29,13 +29,13 @@ const CompanyCard: FC<Props> = ({ company }) => {
         {getFiledName(company.hiring.code)} • {company.recruit_count}명
       </h1>
       <div className={s.sub_infor_wrap}>
-        <h3>회사명</h3>
+        <h3>{company.enterprise_name}</h3>
         <div />
         <span>{company.work_place}</span>
       </div>
       <div className={s.tag_wrap}>
         {company.tags.map((tag, index) => (
-          <div key={index}>#{tag}</div>
+          <div key={index}># {tag}</div>
         ))}
       </div>
     </div>
