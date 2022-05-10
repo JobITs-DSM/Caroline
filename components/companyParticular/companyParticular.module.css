@@ -9,12 +9,12 @@
   padding-bottom: 30px;
 }
 
-.cover_maininfor_wrap {
+.cover_maininfo_wrap {
   width: 840px;
   display: flex;
   flex-direction: column;
 }
-.cover_maininfor_wrap > img {
+.cover_maininfo_wrap > img {
   height: 480px;
   border-radius: 12px;
 }

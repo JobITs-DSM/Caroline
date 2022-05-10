@@ -1,6 +1,5 @@
 import s from "./companyParticular.module.css";
 import { FC, useEffect } from "react";
-import Review from "./Review";
 import { textareaResizing } from "../../lib/util/textareaResizing";
 import ProfileCard from "./../common/ProfileCard/index";
 import { useRouter } from "next/dist/client/router";
@@ -10,6 +9,7 @@ import { QueryKeys } from "../../constants/queryKeys";
 import { SimilarCompanyList } from "./SimilarCompanyList";
 import { LoadingSpiner } from "../common/LoadingSpiner";
 import { CompanyDetail } from "../../interfaces/company";
+import ReviewContainer from "./ReviewContainer";
 
 const CompanyParticular: FC = () => {
   const router = useRouter();
@@ -35,7 +35,7 @@ const CompanyParticular: FC = () => {
     return (
       <div className={s.wrapper}>
         <div className={s.flex_wrapper}>
-          <div className={s.cover_maininfor_wrap}>
+          <div className={s.cover_maininfo_wrap}>
             <img src={company.enterprise_background_image_url} />
             <div className={s.company_main_info}>
               <img src={company.enterprise_profile_image_url} />
@@ -61,18 +61,7 @@ const CompanyParticular: FC = () => {
           <div className={s.side_wrap}>
             <div className={s.sticky_wrap}>
               <ProfileCard />
-              <div className={s.review_wrap}>
-                <h1>면접 후기</h1>
-                <div className={s.review_list}>
-                  <Review />
-                  <Review />
-                </div>
-                <h1>실습 후기</h1>
-                <div className={s.review_list}>
-                  <Review />
-                  <Review />
-                </div>
-              </div>
+              <ReviewContainer />
             </div>
           </div>
         </div>
