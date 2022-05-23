@@ -1,4 +1,4 @@
-import { CompanyCardProps } from "./../interfaces/company";
+import { CompanyCardProps } from "../../interfaces/company";
 export const companyDummy: CompanyCardProps[] = [
   {
     profile:

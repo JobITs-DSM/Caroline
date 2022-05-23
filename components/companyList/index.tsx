@@ -1,10 +1,13 @@
-import { FC } from "react";
-import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
+import { CurrentRecruitmentCompanyList } from "../common/CurrentRecruitmentCompanyList";
+import ListTitle from "../common/ListTitle";
+import s from "./companyList.module.css";
 
-const CompanyList: FC = () => {
+const CompanyList = () => {
   return (
-    <CompanyCardList title="현재 모집중인 취업처" companyList={companyDummy} />
+    <div className={s.wrapper}>
+      <CurrentRecruitmentCompanyList />
+      <ListTitle content="모든 취업처" />
+    </div>
   );
 };
 

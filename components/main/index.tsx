@@ -1,12 +1,10 @@
 import s from "./main.module.css";
-import { FC } from "react";
 import ProfileCard from "../common/ProfileCard";
-import CompanyCardList from "../common/CompanyCardList";
-import { companyDummy } from "./../../export/dummyData";
 import SlidePage from "./slidePage";
 import Chart from "./Chart";
+import { CurrentRecruitmentCompanyList } from "../common/CurrentRecruitmentCompanyList";
 
-const Main: FC = () => {
+const Main = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.grid_wrapper}>
@@ -18,10 +16,7 @@ const Main: FC = () => {
         <ProfileCard />
         <Chart />
       </div>
-      <CompanyCardList
-        title="현재 모집중인 취업처"
-        companyList={companyDummy}
-      />
+      <CurrentRecruitmentCompanyList />
     </div>
   );
 };

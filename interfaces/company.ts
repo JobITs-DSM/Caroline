@@ -1,10 +1,41 @@
+import { FieldKey } from "./requirements";
+
+type Hiring = {
+  id: number;
+  code: FieldKey;
+};
+
 export interface CompanyCardProps {
-  profile: string;
-  cover: string;
-  name: string;
-  field: string;
+  enterprise_profile_image_url: string;
+  enterprise_background_image_url: string;
+  enterprise_name: string;
+  recruit_count: number;
   tags: string[];
-  applicantCnt: number;
-  companyId: number;
-  area: string;
+  work_place: string;
+  hiring: Hiring;
+}
+
+export interface CompanyDetail {
+  registration_number: string;
+  reception_year: string;
+  region: number;
+  enterprise_background_image_url: string;
+  enterprise_profile_image_url: string;
+  introduce: string;
+  enterprise_name: string;
+  work_place: string;
+  hiring_area: Hiring;
+  recruit_count: number;
+  tags: string[];
+}
+
+export type CompanyReview = {
+  content: string;
+  user_name: string;
+  user_profile_image_url: string;
+};
+
+export interface CompanyReviews {
+  interview_review_list: CompanyReview[];
+  training_review_list: CompanyReview[];
 }

@@ -1,19 +1,13 @@
-.wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.title {
-  color: var(--black100);
-  font-size: 24px;
-  font-weight: 500;
-  margin-top: 20px;
-}
-
 .list_wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 30px;
   justify-items: center;
   margin-top: 25px;
+}
+
+.company_is_none {
+  color: var(--grey600);
+  margin-top: 10px;
+  font-size: 16px;
 }
