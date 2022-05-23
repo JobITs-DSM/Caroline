@@ -1,5 +1,5 @@
 import request from "..";
-import { TEST_TOKEN } from "../../constants/api";
+import { FieldKey } from "../../interfaces/requirements";
 import { SearchRequirement } from "../../interfaces/searchRequirement";
 
 const BASE_URI = "/recruitment";
@@ -13,9 +13,17 @@ export default {
         sort: sort,
         hiringCodes: field,
       },
-      headers: {
-        Authorization: `Bearer ${TEST_TOKEN}`,
-      },
     });
+  },
+  getRecuruitmentCompanyDetail({ company_id }: { company_id: string }) {
+    return request.get(`${BASE_URI}/${company_id}`);
+  },
+  getSimilarCompanyList({ hiringCode }: { hiringCode: FieldKey }) {
+    return request.get(
+      `${BASE_URI}/similar?hiringCodes=${hiringCode}&region=1`
+    );
+  },
+  getCompanyReview({ regist_num }: { regist_num: string }) {
+    return request.get(`${BASE_URI}/`);
   },
 };

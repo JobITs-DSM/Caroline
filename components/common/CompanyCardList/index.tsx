@@ -4,19 +4,17 @@ import { CompanyCardProps } from "./../../../interfaces/company";
 import CompanyCard from "../CompanyCard";
 
 interface Props {
-  title: string;
   companyList: CompanyCardProps[];
 }
 
-const CompanyCardList: FC<Props> = (res) => {
+const CompanyCardList: FC<Props> = (props) => {
+  if (props.companyList.length === 0)
+    return <div className={s.company_is_none}>모집중인 취업처가 없습니다.</div>;
   return (
-    <div className={s.wrapper}>
-      <h1 className={s.title}>{res.title}</h1>
-      <div className={s.list_wrap}>
-        {res.companyList.map((company, index) => (
-          <CompanyCard key={index} company={company} />
-        ))}
-      </div>
+    <div className={s.list_wrap}>
+      {props.companyList.map((company, index) => (
+        <CompanyCard key={index} company={company} />
+      ))}
     </div>
   );
 };
