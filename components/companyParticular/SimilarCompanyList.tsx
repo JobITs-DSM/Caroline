@@ -21,7 +21,7 @@ export const SimilarCompanyList: React.FC<Props> = ({ hiringCode }) => {
   return (
     <React.Fragment>
       <ListTitle content="비슷한 취업처" />
-      {/*       {data && <CompanyCardList companyList={data.data.recruitments} />} */}
+      {data && <CompanyCardList companyList={data.data.recruitments} />}
     </React.Fragment>
   );
 };
