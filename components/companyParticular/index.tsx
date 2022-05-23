@@ -52,7 +52,7 @@ const CompanyParticular: FC = () => {
               ))}
             </div>
             <textarea
-              defaultValue="원티드랩은"
+              defaultValue={company.introduce}
               className={s.description}
               id="company-description"
               readOnly
