@@ -23,4 +23,7 @@ export default {
       `${BASE_URI}/similar?hiringCodes=${hiringCode}&region=1`
     );
   },
+  getCompanyReview({ regist_num }: { regist_num: string }) {
+    return request.get(`${BASE_URI}/`);
+  },
 };

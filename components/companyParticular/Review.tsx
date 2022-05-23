@@ -1,11 +1,15 @@
-import s from "./companyParticular.module.css";
 import { FC } from "react";
+import { CompanyReview } from "../../interfaces/company";
 
-const Review: FC = () => {
+interface Props {
+  review: CompanyReview;
+}
+
+const Review: FC<Props> = ({ review }) => {
   return (
     <div>
-      <img src="http://t1.daumcdn.net/liveboard/subusunews/ecfd52e3c81a492abbf4e7d6191e36e9.png" />
-      <p>솔직히 이번 면접 너무 어렵네요... 이런 면접이 있엇나요??</p>
+      <img src={review.user_profile_image_url} />
+      <p>{review.content}</p>
     </div>
   );
 };

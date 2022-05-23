@@ -28,3 +28,14 @@ export interface CompanyDetail {
   recruit_count: number;
   tags: string[];
 }
+
+export type CompanyReview = {
+  content: string;
+  user_name: string;
+  user_profile_image_url: string;
+};
+
+export interface CompanyReviews {
+  interview_review_list: CompanyReview[];
+  training_review_list: CompanyReview[];
+}

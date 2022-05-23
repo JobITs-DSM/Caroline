@@ -61,7 +61,7 @@ const CompanyParticular: FC = () => {
           <div className={s.side_wrap}>
             <div className={s.sticky_wrap}>
               <ProfileCard />
-              <ReviewContainer />
+              <ReviewContainer regist_num={company.registration_number} />
             </div>
           </div>
         </div>
