@@ -10,8 +10,11 @@ import { SimilarCompanyList } from "./SimilarCompanyList";
 import { LoadingSpiner } from "../common/LoadingSpiner";
 import { CompanyDetail } from "../../interfaces/company";
 import ReviewContainer from "./ReviewContainer";
+import { useRecoilState } from "recoil";
+import { companyInforState } from "../../atoms/companyInfor";
 
 const CompanyParticular: FC = () => {
+  const [_, setCompanyInforForApply] = useRecoilState(companyInforState);
   const router = useRouter();
   const company_id = router.query.id as string;
   const companyQuery = useQuery(
@@ -30,6 +33,15 @@ const CompanyParticular: FC = () => {
   useEffect(() => {
     textareaResizing("company-description");
   }, []);
+
+  useEffect(() => {
+    if (company) {
+      setCompanyInforForApply({
+        hiring_id: company.hiring.hiring_id,
+        registration_number: company.registration_number,
+      });
+    }
+  }, [company]);
   if (companyQuery.isLoading) return <LoadingSpiner />;
   if (company)
     return (

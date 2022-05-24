@@ -15,6 +15,12 @@ export interface CompanyCardProps {
   hiring: Hiring;
 }
 
+type HiringOnCompanyDetail = {
+  hiring_id: number;
+  code: string;
+  task: string;
+};
+
 export interface CompanyDetail {
   registration_number: string;
   reception_year: string;
@@ -27,6 +33,7 @@ export interface CompanyDetail {
   hiring_area: Hiring;
   recruit_count: number;
   tags: string[];
+  hiring: HiringOnCompanyDetail;
 }
 
 export type CompanyReview = {
@@ -38,4 +45,9 @@ export type CompanyReview = {
 export interface CompanyReviews {
   interview_review_list: CompanyReview[];
   training_review_list: CompanyReview[];
+}
+
+export interface CompanyInforForApply {
+  registration_number: string;
+  hiring_id: number;
 }

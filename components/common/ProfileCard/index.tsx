@@ -1,7 +1,17 @@
 import s from "./ProfileCard.module.css";
 import { FC } from "react";
+import { useRouter } from "next/dist/client/router";
 
 const ProfileCard: FC = () => {
+  const router = useRouter();
+  const isCompanyDetailPage = router.pathname === "/company/[id]";
+
+  const applyCompany = () => {
+    if (!isCompanyDetailPage) {
+      alert("회사 상세페이지에서 지원해주세요.");
+    } else {
+    }
+  };
   return (
     <div className={s.wrapper}>
       <div className={s.profile_infor}>
@@ -11,7 +21,7 @@ const ProfileCard: FC = () => {
           <h3>프론트엔드</h3>
         </div>
       </div>
-      <button>지원하기</button>
+      <button onClick={applyCompany}>지원하기</button>
     </div>
   );
 };
