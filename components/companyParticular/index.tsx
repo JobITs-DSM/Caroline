@@ -42,7 +42,9 @@ const CompanyParticular: FC = () => {
       });
     }
   }, [company]);
+
   if (companyQuery.isLoading) return <LoadingSpiner />;
+
   if (company)
     return (
       <div className={s.wrapper}>
@@ -52,7 +54,7 @@ const CompanyParticular: FC = () => {
             <div className={s.company_main_info}>
               <img src={company.enterprise_profile_image_url} />
               <div>
-                <h1>프론트엔드</h1>
+                <h1>{company.hiring.task}</h1>
                 <h3>
                   {company.enterprise_name} <span>{company.work_place}</span>
                 </h3>
